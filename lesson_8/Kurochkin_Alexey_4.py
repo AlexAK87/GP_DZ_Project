@@ -9,7 +9,7 @@ def val_checker(valide_number):
                 result = func(*args)
                 msg = result
             else:
-                raise ValueError
+                raise ValueError(f'wrong val {args[0]}')
             return msg
 
         return wrapper
