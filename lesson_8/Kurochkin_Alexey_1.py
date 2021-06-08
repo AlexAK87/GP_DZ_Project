@@ -4,16 +4,18 @@ valid_email = re.compile(r'^[^.!#$%@&+/=?^_`{|}~-][a-zA-Z0-9._-]+@[a-zA-Z0-9]+.[
 
 
 def email_parse(email_address):
-    assert valid_email.match(email_address), f'{email_address} не верный email'
+    if valid_email.match(email_address):
 
-    rezsult_dict = {}
+        rezsult_dict = {}
 
-    email_list = re.split(r'@', email_address)
+        email_list = re.split(r'@', email_address)
 
-    rezsult_dict.setdefault('username', email_list[0])
-    rezsult_dict.setdefault('domain', email_list[1])
+        rezsult_dict.setdefault('username', email_list[0])
+        rezsult_dict.setdefault('domain', email_list[1])
 
-    return rezsult_dict
+        return rezsult_dict
+    else:
+        raise ValueError(f'wrong email {email_address}')
 
 
 email_addres = input("Введеите email для проверки: ")
