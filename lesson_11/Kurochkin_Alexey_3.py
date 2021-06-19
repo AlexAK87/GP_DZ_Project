@@ -6,4 +6,5 @@ class MyExceptions(Exception):
         self.text = text
 
     def my_fun(self):
+        return False
         pass
