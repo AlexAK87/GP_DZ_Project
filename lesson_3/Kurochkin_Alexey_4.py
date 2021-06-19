@@ -1,4 +1,3 @@
-
 def thesaurus(*args):
     """
     Функция возвращает словарь, в котором ключи — первые буквы имен,
@@ -17,6 +16,7 @@ def thesaurus(*args):
             array_list.append(name)
 
     return result_dict
+
 
 def thesaurus_adv(*args):
     result_dict = {}
@@ -37,7 +37,7 @@ def thesaurus_adv(*args):
             else:
                 result_dict.get(first_letter_last_name).setdefault(key2, [name])
 
-
     return result_dict
 
-print(thesaurus_adv("Иван Сергеев", "Инна Серова",  "Петр Алексеев", "Илья Иванов", "Анна Савельева"))
+
+print(thesaurus_adv("Иван Сергеев", "Инна Серова", "Петр Алексеев", "Илья Иванов", "Анна Савельева"))
