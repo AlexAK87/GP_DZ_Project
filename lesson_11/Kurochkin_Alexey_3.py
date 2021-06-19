@@ -25,4 +25,4 @@ def get_number(num):
         return f'Результат: {result}'
 
 
-
+while True:
